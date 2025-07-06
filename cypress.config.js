@@ -6,8 +6,7 @@ baseUrl: 'https://plan-execute-deliver.com', // The base URL for your tests
     defaultCommandTimeout: 10000,
     screenshotOnRunFailure: true, // Enables screenshots on test failure
     video: true, // Enables video recording of test runs
-   specPattern: 'cypress/e2e/**/*.cy.js', // Path to where your test files 
-//are located
+   specPattern: 'cypress/e2e/**/*.{js,cy.js}', // Path to where your test files are located
     setupNodeEvents(on, config) {
 on('before:run', () => {
         console.log('Cypress tests are starting...');
