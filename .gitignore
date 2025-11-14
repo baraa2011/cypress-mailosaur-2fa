@@ -8,6 +8,7 @@ cypress/downloads/
 
 # Environment variables
 cypress.env.json
+.env
 
 # Logs
 logs

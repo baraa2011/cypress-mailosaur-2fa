@@ -21,3 +21,14 @@ npx cypress open
 ```
 
 **Note:** The `cypress.env.json` file is already in `.gitignore` for security reasons.
+
+### Using a `.env` File
+
+If you prefer keeping credentials in a `.env` file, create one at the project root:
+
+```
+USERNAME=your-github-username
+PASSWORD=your-github-password
+```
+
+The Cypress config automatically loads `.env` files and merges those values with anything from `cypress.env.json` or CLI `--env` flags. When any required variable is missing you will see a warning before the run starts.
