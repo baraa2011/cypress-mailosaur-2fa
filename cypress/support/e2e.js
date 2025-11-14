@@ -15,3 +15,13 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands';
+
+// Ensure the Mailosaur plugin sees either MAILOSAUR_API_KEY or the Cypress-prefixed variant.
+const resolvedMailosaurApiKey =
+  Cypress.env('MAILOSAUR_API_KEY') || Cypress.env('CYPRESS_MAILOSAUR_API_KEY');
+if (resolvedMailosaurApiKey && !Cypress.env('MAILOSAUR_API_KEY')) {
+  Cypress.env('MAILOSAUR_API_KEY', resolvedMailosaurApiKey);
+}
+
+import 'cypress-mailosaur';
+import './mailosaur';
