@@ -26,7 +26,7 @@ it('login with GitHub', () => {
         cy.log(`Using Mailosaur phone number: ${mailosaurPhoneNumber}`);
     }
 
-    // Validate credentials
+    // Validate the credentials
     if (!username || !password || !mailosaurServer) {
       throw new Error('GitHub username, password, or Mailosaur server is not set in cypress.env.json');
     }
